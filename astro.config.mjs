@@ -7,7 +7,14 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), icon()],
+  integrations: [tailwind(), react(), icon(
+    {
+      include: {
+        mdi: ["linkedin"],
+        ic: ["baseline-mail", "baseline-discord"]
+      },
+    }
+  )],
   output: "server",
   adapter: cloudflare()
 });
