@@ -1,0 +1,43 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import '@fontsource-variable/inter';
+
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html data-theme="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="// cozyHQ //" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+	<ViewTransitions />
+
+  </head>
+  <body class="">
+    <div class="navbar mb-10">
+      <a href="/" class="btn btn-ghost text-xl">main</a>
+      <a href="/designs" class="btn btn-ghost text-xl">designs</a>
+      <a href="/contact" class="btn btn-ghost text-xl">contact</a>
+    </div>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(/bg.jpg);
+    background-size: cover;
+	font-family: 'Inter Variable', sans-serif;
+    font-weight: normal;
+  }
+</style>
