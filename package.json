@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/cloudflare": "^8.0.1",
     "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/inter": "^5.0.16",
@@ -23,6 +24,8 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/mdi": "^1.1.63",
     "@tailwindcss/typography": "^0.5.10",
     "astro-icon": "^1.0.1",
     "daisyui": "^4.4.24"
